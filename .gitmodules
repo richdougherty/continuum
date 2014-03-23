@@ -4,3 +4,6 @@
 [submodule "third_party/CodeMirror"]
 	path = third_party/CodeMirror
   url = git://github.com/Benvie/CodeMirror.git
+[submodule "third_party/test262"]
+	path = third_party/test262
+	url = https://github.com/tc39/test262.git

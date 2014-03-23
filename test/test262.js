@@ -1,5 +1,5 @@
 var util      = require('util'),
-    continuum = require('continuum');
+    continuum = require('../engine');
 
 var print          = console.log,
     define         = continuum.utility.define,
@@ -340,7 +340,7 @@ var TestSuite = (function(){
 
   function TestSuite(options){
     options = new TestSuiteOptions(options);
-    var root = path(options.root).resolve(['test262', 'test']);
+    var root = path(options.root).resolve(['..', 'third_party', 'test262', 'test']);
     this.tests = root.resolve('suite');
     this.libs = root.resolve('harness');
     this.strictOnly = options.strictOnly;
