@@ -1168,6 +1168,9 @@ var runtime = (function(GLOBAL, exports, undefined){
         deoptimize(this);
         return this.set(key, value);
       },
+      function destroy(){
+        // Reflected properties don't need to be destroyed
+      },
       (function(){
         return function define(key, value, attr){
           deoptimize(this);
